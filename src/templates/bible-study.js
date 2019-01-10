@@ -18,7 +18,7 @@ export default class BibleStudy extends Component {
             <div>
                 <TemplateWrapper>
                     <h1>{markdownRemark.frontmatter.title}</h1>
-                    <p>{markdownRemark.frontmatter.date}</p> // need to format date
+                    <p>{markdownRemark.frontmatter.date}</p>
                     <div dangerouslySetInnerHTML={{
                         __html: markdownRemark.html
                     }} />
@@ -43,7 +43,7 @@ export const query = graphql`
             html
             frontmatter {
                 title
-                date
+                date(formatString: "MMMM DD YYYY")
                 slug
             }
         }
