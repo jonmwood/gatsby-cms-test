@@ -18,6 +18,7 @@ exports.createPages = ({ actions, graphql }) => {
             frontmatter {
               tags
               templateKey
+              slug
             }
           }
         }
@@ -42,9 +43,36 @@ exports.createPages = ({ actions, graphql }) => {
         // additional data can be passed via context
         context: {
           id,
+          slug: edge.node.frontmatter.slug,
         },
       })
     })
+
+    // Bible Study pages:
+    // let bibleStudies = []
+    // // Iterate through each post, putting all found bible studies into `bibleStudies`
+    // posts.forEach(edge => {
+    //   if (_.get(edge, `node.frontmatter.templateKey`) === "bible-study") {
+    //     bibleStudies = bibleStudies.concat(edge.node)
+    //   }
+    // })
+    // // Eliminate duplicate tags
+    // bibleStudies = _.uniq(bibleStudies)
+
+    // // Make bible study pages
+    // bibleStudies.forEach(bibleStudy => {
+    //   const bibleStudyPath = `/bible-studies${node.frontmatter.slug}`
+
+    //   createPage({
+    //     path: bibleStudyPath,
+    //     component: path.resolve(`src/templates/${String(node.frontmatter.templateKey)}.js`),
+    //     context: {
+    //       slug: node.frontmatter.slug
+    //     },
+    //   })
+    // })
+
+
 
     // Tag pages:
     let tags = []

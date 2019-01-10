@@ -1,80 +1,90 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import github from '../img/github-icon.svg'
-import logo from '../img/logo.svg'
+import logo from '../../static/img/rand-logo.png'
+import styled from 'styled-components'
+import { FaSearch } from 'react-icons/fa';
 
-const Navbar = class extends React.Component {
+const StyledNavbar = styled.nav`
+  box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 1px;
+  width: 100vw;
+  z-index: 1000;
+  background-color: #fdfdfd;
+`
 
-  componentDidMount() {
-    // Get all "navbar-burger" elements
-   const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
-    // Check if there are any navbar burgers
-   if ($navbarBurgers.length > 0) {
- 
-     // Add a click event on each of them
-     $navbarBurgers.forEach( el => {
-       el.addEventListener('click', () => {
- 
-         // Get the target from the "data-target" attribute
-         const target = el.dataset.target;
-         const $target = document.getElementById(target);
- 
-         // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-         el.classList.toggle('is-active');
-         $target.classList.toggle('is-active');
- 
-       });
-     });
-   }
- }
- 
- render() {
-   return (
-  
-  <nav className="navbar is-transparent" role="navigation" aria-label="main-navigation">
-    <div className="container">
-      <div className="navbar-brand">
-        <Link to="/" className="navbar-item" title="Logo">
-          <img src={logo} alt="Kaldi" style={{ width: '88px' }} />
-        </Link>
-        {/* Hamburger menu */}
-        <div className="navbar-burger burger" data-target="navMenu">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-      </div>
-      <div id="navMenu" className="navbar-menu">
-      <div className="navbar-start has-text-centered">
-        <Link className="navbar-item" to="/about">
-          About
-        </Link>
-        <Link className="navbar-item" to="/products">
-          Products
-        </Link>
-        <Link className="navbar-item" to="/contact">
-          Contact
-        </Link>
-        <Link className="navbar-item" to="/contact/examples">
-          Form Examples
-        </Link>
-      </div>
-      <div className="navbar-end has-text-centered">
-        <a
-          className="navbar-item"
-          href="https://github.com/AustinGreen/gatsby-netlify-cms-boilerplate"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <span className="icon">
-            <img src={github} alt="Github" />
-          </span>
-        </a>
-      </div>
-      </div>
-    </div>
-  </nav>
-  )}
-}
+const Container = styled.div`
+  display: flex;
+  justify-content: space-between;
+  max-width: 1140px;
+  margin: 0 auto;
+`
+const NavLogo = styled.div`
+`
 
+const NavMenu = styled.div`
+  display: grid;
+  grid-template-columns: 4fr 2fr;
+  justify-items: center;
+  align-items: center;
+  flex: flex-end;
+`
+
+const NavLinks = styled.div`
+`
+
+const NavLink = styled(Link)`
+  color: goldenrod;
+  margin: 0 1.25rem;
+`;
+
+
+const SearchFieldContainer = styled.div`
+  position: relative;
+`
+
+const SearchField = styled.input`
+  font-size: 18px;
+  border-radius: 5px;
+  height: 2rem;
+  font-family: 'Nunito Sans';
+  position: relative;
+  padding-left: 2rem;
+  border-style: none;
+  border: 1px solid #ddd;
+`
+
+const Navbar = () => (
+  <StyledNavbar className="">
+    <Container>
+      <NavLogo className="">
+        <Link to="/" className="">
+          <figure className="image">
+            <img src={logo} alt="Rand Cho" style={{ width: '120px' }} />
+          </figure>
+        </Link>
+      </NavLogo>
+      <NavMenu>
+        <NavLinks>
+          <NavLink className="" to="/sermons">
+            Sermons
+          </NavLink>
+          <NavLink className="" to="/bible-studies">
+            Bible Studies
+          </NavLink>
+          <NavLink className="" to="/q&a">
+            Pastoral Q&A
+          </NavLink>
+          <NavLink className="" to="/contact/examples">
+            Tools
+          </NavLink>
+        </NavLinks>
+        <SearchFieldContainer>
+          <FaSearch style={{ position: 'absolute', top: '0.6rem', left: '0.6rem', zIndex: '5', color: '#bbb' }} />
+          <SearchField type="text" placeholder="Search" />
+        </SearchFieldContainer>
+      </NavMenu>
+    </Container>
+  </StyledNavbar>
+)
 export default Navbar
