@@ -30,11 +30,14 @@ export default class BibleStudy extends Component {
 
 export const query = graphql`
     query SingleBibleStudyQuery($slug: String!) {
-        markdownRemark(frontmatter: {
+        markdownRemark(fields: {
             slug: {
             eq: $slug
             }
         }) {
+            fields {
+                slug
+            }
             html
             frontmatter {
                 title
