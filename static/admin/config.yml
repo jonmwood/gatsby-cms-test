@@ -41,9 +41,9 @@ collections:
           - { label: 'Title', name: 'title', widget: 'string' }
           - { label: 'Description', name: 'description', widget: 'text' }
           - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-          - { label: Image, name: image, widget: image }
-          - { label: 'Body', name: 'body', widget: 'markdown' }
-          - { label: 'Tags', name: 'tags', widget: 'list' }
+          - { label: Image, name: image, widget: image, required: false }
+          - { label: 'Body', name: 'body', widget: 'markdown', required: false }
+          - { label: 'Tags', name: 'tags', widget: 'list', required: false }
 
     - name: 'pages'
       label: 'Pages'

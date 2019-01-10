@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import TemplateWrapper from '../components/Layout'
 import { graphql } from 'gatsby'
+// import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 
 // Static Query
 // used anywhere, doesn't accept variables/parameters, can't use context
@@ -17,7 +18,7 @@ export default class BibleStudy extends Component {
             <div>
                 <TemplateWrapper>
                     <h1>{markdownRemark.frontmatter.title}</h1>
-                    <p>{markdownRemark.frontmatter.date}</p>
+                    <p>{markdownRemark.frontmatter.date}</p> // need to format date
                     <div dangerouslySetInnerHTML={{
                         __html: markdownRemark.html
                     }} />
