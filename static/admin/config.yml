@@ -5,6 +5,8 @@ backend:
 media_folder: static/img
 public_folder: /img
 
+publish_mode: editorial_workflow
+
 collections:
   - name: "blog"
     label: "Blog"
@@ -24,6 +26,9 @@ collections:
     folder: "src/pages/bible-studies"
     create: true
     slug: "{{year}}-{{month}}-{{day}}_{{slug}}"
+      encoding: "ascii"
+      clean_accents: true
+      sanitize_replacement: "_"
     fields: 
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "bible-study"}
       - {label: "Title", name: "title", widget: "string"}
