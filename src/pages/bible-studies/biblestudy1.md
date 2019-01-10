@@ -4,9 +4,10 @@ title: 'Bible Study #1!'
 description: Yes this is the description
 date: '2019-01-01'
 image: /img/sermon_daniel_square.jpg
+slug: /biblestudy1
 tags:
-  - Human Soul
-  - ''
+    - Human Soul
+    - ''
 ---
 
 ## Bible Study #1!!!!!!!!!!!
