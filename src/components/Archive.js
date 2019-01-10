@@ -19,7 +19,6 @@ const POST_ARCHIVE_QUERY = graphql`
                 fields {
                     slug
                 }
-                id
                 frontmatter {
                 title
                 slug
