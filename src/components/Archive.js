@@ -16,6 +16,10 @@ const POST_ARCHIVE_QUERY = graphql`
             edges {
             node {
                 html
+                fields {
+                    slug
+                }
+                id
                 frontmatter {
                 title
                 slug
@@ -34,8 +38,8 @@ const Archive = () => (
                     <h3>Archive</h3>
                     <ul>
                         {allMarkdownRemark.edges.map(edge => (
-                            <li key={edge.node.frontmatter.slug}>
-                                <Link to={`/bible-studies${edge.node.frontmatter.slug}`}>{edge.node.frontmatter.title}
+                            <li key={edge.node.fields.slug}>
+                                <Link to={edge.node.fields.slug}>{edge.node.frontmatter.title}
                                 </Link>
                             </li>
                         ))}

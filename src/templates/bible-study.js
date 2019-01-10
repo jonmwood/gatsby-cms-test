@@ -32,12 +32,13 @@ export const query = graphql`
     query SingleBibleStudyQuery($slug: String!) {
         markdownRemark(fields: {
             slug: {
-            eq: $slug
+                eq: $slug
             }
         }) {
             fields {
                 slug
             }
+            id
             html
             frontmatter {
                 title
