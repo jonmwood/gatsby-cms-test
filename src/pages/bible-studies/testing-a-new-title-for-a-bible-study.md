@@ -12,6 +12,16 @@ image: /img/screen-shot-2018-10-19-at-16.03.48.png
 1. Yes
 2. No
 
+
+
+
+
+
+
+
+
+![sermon cover](/img/sermon_daniel_square.jpg "Daniel Sermon Image")
+
 ```js
 const aVariable = 100;
 ```
