@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
 import TemplateWrapper from '../components/Layout'
 import { graphql } from 'gatsby'
-// import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
+import Img from 'gatsby-image'
+import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
+import styled from 'styled-components'
 
 // Static Query
 // used anywhere, doesn't accept variables/parameters, can't use context
@@ -9,6 +11,14 @@ import { graphql } from 'gatsby'
 
 // Page Query
 // Must be used on pages
+
+const bibleStudyImageStyle = {
+    'borderRadius': '5px',
+    'width': '20vw',
+    'height': '20vw',
+    'margin': '0 auto'
+}
+
 
 
 export default class BibleStudy extends Component {
@@ -22,6 +32,8 @@ export default class BibleStudy extends Component {
                     <div dangerouslySetInnerHTML={{
                         __html: markdownRemark.html
                     }} />
+                    <PreviewCompatibleImage imageInfo={markdownRemark.frontmatter} imageStyle={bibleStudyImageStyle} />
+
                 </TemplateWrapper>
             </div>
         )
@@ -44,7 +56,13 @@ export const query = graphql`
             frontmatter {
                 title
                 date(formatString: "MMMM DD YYYY")
-                slug
+                image {
+                    childImageSharp {
+                        fluid(maxWidth: 1000) {
+                            ...GatsbyImageSharpFluid
+                        }
+                    }
+                }
             }
         }
     }

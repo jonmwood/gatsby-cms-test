@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Link, graphql } from 'gatsby'
+import { Link, graphql, StaticQuery } from 'gatsby'
 import Layout from '../../components/Layout'
 import classes from './sermons.sass'
 import { FaHome, FaBeer } from 'react-icons/fa';
@@ -47,6 +47,7 @@ const SermonsContainer = styled.div`
 `
 
 export default class SermonsPage extends React.Component {
+
     render() {
         const { data } = this.props
         const { edges: posts } = data.allMarkdownRemark

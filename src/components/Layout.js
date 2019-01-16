@@ -4,7 +4,7 @@ import { StaticQuery, graphql } from "gatsby"
 import Navbar from '../components/Navbar'
 import './all.sass'
 import Archive from './Archive'
-
+import Img from 'gatsby-image'
 
 import { createGlobalStyle } from 'styled-components'
 
@@ -23,10 +23,21 @@ const GlobalStyle = createGlobalStyle`
     text-decoration: none;
     color: goldenrod;
     }
-
-  
 `
-
+//   < StaticQuery
+// query = { graphql`
+//         query SermonImageQuery {
+//                 file(relativePath: {
+//                     regex:"/sermon/"
+//                 }) {
+//                     childImageSharp {
+//                     fluid(maxWidth: 500) {
+//                         ...GatsbyImageSharpFluid
+//                     }
+//                     }
+//                 }
+//             }
+//         `} />
 
 const TemplateWrapper = ({ children }) => (
   <StaticQuery
@@ -39,6 +50,15 @@ const TemplateWrapper = ({ children }) => (
               author,
             }
           }
+          file(relativePath: {
+                    regex:"/sermon/"
+                }) {
+                    childImageSharp {
+                    fluid(maxWidth: 500) {
+                      ...GatsbyImageSharpFluid
+                    }
+                    }
+                }
         }
     `}
     render={data => (
@@ -66,6 +86,7 @@ const TemplateWrapper = ({ children }) => (
         <Navbar />
 
         <div>
+          <Img fluid={data.file.childImageSharp.fluid} />
           {children}
         </div>
         <Archive />
