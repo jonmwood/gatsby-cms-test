@@ -86,7 +86,6 @@ const TemplateWrapper = ({ children }) => (
         <Navbar />
 
         <div>
-          <Img fluid={data.file.childImageSharp.fluid} />
           {children}
         </div>
         <Archive />

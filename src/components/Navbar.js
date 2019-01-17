@@ -3,6 +3,7 @@ import { Link } from 'gatsby'
 import logo from '../../static/img/rand-logo.png'
 import styled from 'styled-components'
 import { FaSearch } from 'react-icons/fa';
+import media from './MediaQueries'
 
 const StyledNavbar = styled.nav`
   box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.05);
@@ -16,18 +17,34 @@ const StyledNavbar = styled.nav`
 const Container = styled.div`
   display: flex;
   justify-content: space-between;
-  max-width: 1140px;
+  max-width: 95%;
   margin: 0 auto;
+
+  ${media.desktop`
+    max-width: 90%;
+  `}
+
 `
 const NavLogo = styled.div`
+  .image {
+    margin: 1rem;
+  }
 `
 
 const NavMenu = styled.div`
-  display: grid;
-  grid-template-columns: 4fr 2fr;
-  justify-items: center;
-  align-items: center;
-  flex: flex-end;
+  display: none;
+
+  ${media.desktop`
+    display: grid;
+    grid-template-columns: 4fr 2fr;
+    justify-items: center;
+    align-items: center;
+    flex: flex-end;    
+  `}
+  
+  
+
+  
 `
 
 const NavLinks = styled.div`

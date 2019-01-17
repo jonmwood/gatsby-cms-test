@@ -21,6 +21,11 @@ const bibleStudyImageStyle = {
 
 
 
+const StyledDate = styled.p`
+    font-weight: 700;
+    color: #555;
+`
+
 export default class BibleStudy extends Component {
     render() {
         const { markdownRemark } = this.props.data
@@ -28,11 +33,12 @@ export default class BibleStudy extends Component {
             <div>
                 <TemplateWrapper>
                     <h1>{markdownRemark.frontmatter.title}</h1>
-                    <p>{markdownRemark.frontmatter.date}</p>
+                    <StyledDate>{markdownRemark.frontmatter.date}</StyledDate>
                     <div dangerouslySetInnerHTML={{
                         __html: markdownRemark.html
                     }} />
                     <PreviewCompatibleImage imageInfo={markdownRemark.frontmatter} imageStyle={bibleStudyImageStyle} />
+
 
                 </TemplateWrapper>
             </div>
