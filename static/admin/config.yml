@@ -45,6 +45,36 @@ collections:
           - { label: 'Body', name: 'body', widget: 'markdown', required: false }
           - { label: 'Tags', name: 'tags', widget: 'list', required: false }
 
+    - name: 'bible study part'
+      label: 'Bible Study Part'
+      folder: 'src/pages/bible-studies/parts'
+      create: true
+      slug: '{{slug}}'
+      fields:
+          - {
+                label: 'Template Key',
+                name: 'templateKey',
+                widget: 'hidden',
+                default: 'bible-study-part',
+            }
+          - { label: 'Title', name: 'title', widget: 'string', required: true }
+          - {
+                label: 'Description',
+                name: 'description',
+                widget: 'text',
+                required: false,
+            }
+          - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+          - { label: Image, name: image, widget: image, required: false }
+          - {
+                label: 'File Uploads',
+                name: 'files',
+                widget: 'file',
+                required: false,
+            }
+          - { label: 'Body', name: 'body', widget: 'markdown', required: true }
+          - { label: 'Tags', name: 'tags', widget: 'list', required: false }
+
     - name: 'pages'
       label: 'Pages'
       files:
