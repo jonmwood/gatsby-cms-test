@@ -2,11 +2,10 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from "gatsby"
 import Navbar from '../components/Navbar'
-import './all.sass'
 import Archive from './Archive'
 import Img from 'gatsby-image'
-
-import { createGlobalStyle } from 'styled-components'
+import styled, { createGlobalStyle } from 'styled-components'
+import media from './MediaQueries'
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -24,6 +23,21 @@ const GlobalStyle = createGlobalStyle`
     color: goldenrod;
     }
 `
+
+const MainLayout = styled.div`
+display: grid;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 3rem;
+
+
+    ${media.desktop`
+        width: 75%;
+    `}
+`
+
+
+
 //   < StaticQuery
 // query = { graphql`
 //         query SermonImageQuery {
@@ -50,15 +64,6 @@ const TemplateWrapper = ({ children }) => (
               author,
             }
           }
-          file(relativePath: {
-                    regex:"/sermon/"
-                }) {
-                    childImageSharp {
-                    fluid(maxWidth: 500) {
-                      ...GatsbyImageSharpFluid
-                    }
-                    }
-                }
         }
     `}
     render={data => (
@@ -85,9 +90,9 @@ const TemplateWrapper = ({ children }) => (
         <GlobalStyle />
         <Navbar />
 
-        <div>
+        <MainLayout>
           {children}
-        </div>
+        </MainLayout>
         <Archive />
       </div>
     )}
