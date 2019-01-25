@@ -4,7 +4,7 @@ import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 import styled from 'styled-components'
-import { HTMLContent } from '../components/Content';
+import { StyledHTML } from '../components/Content';
 
 
 // Static Query
@@ -22,25 +22,9 @@ const bibleStudyImageStyle = {
 }
 
 
-
 const StyledDate = styled.p`
     font-weight: 700;
     color: #555;
-`
-
-const StyledHTML = styled(HTMLContent)`
-    color: red;
-
-    h1 {
-        color: blue;
-    }
-
-    .gatsby-resp-image-link {
-        max-width: 500px;
-        max-height: 500px;
-        margin: 0 auto;
-    }
-
 `
 
 

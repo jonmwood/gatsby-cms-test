@@ -4,7 +4,7 @@ import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 import styled from 'styled-components'
-import { HTMLContent } from '../components/Content';
+import { StyledHTML } from '../components/Content';
 
 const bibleStudyImageStyle = {
     'borderRadius': '5px',
@@ -28,9 +28,7 @@ export default class BibleStudy extends Component {
                 <TemplateWrapper>
                     <h1>{markdownRemark.frontmatter.title}</h1>
                     <StyledDate>{markdownRemark.frontmatter.date}</StyledDate>
-                    <div dangerouslySetInnerHTML={{
-                        __html: markdownRemark.html
-                    }} />
+                    <StyledHTML content={markdownRemark.html} />
                     <PreviewCompatibleImage imageInfo={markdownRemark.frontmatter} imageStyle={bibleStudyImageStyle} />
 
 
