@@ -9,8 +9,8 @@ image: /img/chemex.jpg
 tags:
   - Human Soul
 ---
-# The Definition
+## [1. The Beginning of Life and Abortion](https://pensive-jennings-ff7cbd.netlify.com/bible-studies/parts/the-beginning-of-life-and-abortion/)
 
-asdfdsafdfs
+[2. Part 2](https://google.com)
 
-## The Circumstance
+# [3. Third Part] (https://nba.com)
