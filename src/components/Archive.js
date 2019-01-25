@@ -21,7 +21,6 @@ const POST_ARCHIVE_QUERY = graphql`
                 }
                 frontmatter {
                 title
-                slug
                 }
             }
             }
