@@ -4,6 +4,7 @@ import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 import styled from 'styled-components'
+import { HTMLContent } from '../components/Content';
 
 const bibleStudyImageStyle = {
     'borderRadius': '5px',

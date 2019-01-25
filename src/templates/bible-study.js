@@ -4,6 +4,8 @@ import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 import styled from 'styled-components'
+import { HTMLContent } from '../components/Content';
+
 
 // Static Query
 // used anywhere, doesn't accept variables/parameters, can't use context
@@ -26,6 +28,22 @@ const StyledDate = styled.p`
     color: #555;
 `
 
+const StyledHTML = styled(HTMLContent)`
+    color: red;
+
+    h1 {
+        color: blue;
+    }
+
+    .gatsby-resp-image-link {
+        max-width: 500px;
+        max-height: 500px;
+        margin: 0 auto;
+    }
+
+`
+
+
 export default class BibleStudy extends Component {
     render() {
         const { markdownRemark } = this.props.data
@@ -34,9 +52,7 @@ export default class BibleStudy extends Component {
                 <TemplateWrapper>
                     <h1>{markdownRemark.frontmatter.title}</h1>
                     <StyledDate>{markdownRemark.frontmatter.date}</StyledDate>
-                    <div dangerouslySetInnerHTML={{
-                        __html: markdownRemark.html
-                    }} />
+                    <StyledHTML content={markdownRemark.html} />
                     <PreviewCompatibleImage imageInfo={markdownRemark.frontmatter} imageStyle={bibleStudyImageStyle} />
 
 
