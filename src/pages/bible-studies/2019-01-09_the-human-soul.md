@@ -13,4 +13,4 @@ tags:
 
 [2. Part 2](https://google.com)
 
-# [3. Third Part] (https://nba.com)
+# [3. Third Part](https://nba.com)
