@@ -21,6 +21,12 @@ const StyledDate = styled.p`
     color: #555;
 `
 
+const Passage = styled.p`
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #555; 
+`
+
 
 export default class Sermon extends Component {
     render() {
@@ -29,6 +35,8 @@ export default class Sermon extends Component {
             <div>
                 <TemplateWrapper>
                     <h1>{markdownRemark.frontmatter.title}</h1>
+                    <h3>{markdownRemark.frontmatter.sermonSeries}</h3>
+                    <Passage>{markdownRemark.frontmatter.passage}</Passage>
                     <StyledDate>{markdownRemark.frontmatter.date}</StyledDate>
                     <StyledHTML content={markdownRemark.html} />
                     <PreviewCompatibleImage imageInfo={markdownRemark.frontmatter} imageStyle={sermonImageStyle} />
@@ -55,6 +63,8 @@ export const query = graphql`
             html
             frontmatter {
                 title
+                sermonSeries
+                passage
                 date(formatString: "MMMM DD YYYY")
                 image {
                     childImageSharp {
