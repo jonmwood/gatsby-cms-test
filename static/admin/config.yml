@@ -45,27 +45,27 @@ collections:
                 widget: 'text',
                 required: false,
             }
-        - {
-            label: 'Sermon Series',
-            name: 'sermonSeries',
-            widget: 'text',
-            required: true,
-        }
-        - {
+          - {
+                label: 'Sermon Series',
+                name: 'sermonSeries',
+                widget: 'text',
+                required: true,
+            }
+          - {
                 label: 'Passage',
                 name: 'passage',
                 widget: 'text',
                 required: true,
             }
 
-        - {
-            label: 'Section #',
-            name: 'section',
-            widget: 'number',
-            valueType: 'int',
-            min: 1,
-            required: false,
-        }
+          - {
+                label: 'Section #',
+                name: 'section',
+                widget: 'number',
+                valueType: 'int',
+                min: 1,
+                required: false,
+            }
           - { label: 'Publish Date', name: 'date', widget: 'datetime' }
           - { label: Image, name: image, widget: image, required: false }
           - {
@@ -76,8 +76,6 @@ collections:
             }
           - { label: 'Body', name: 'body', widget: 'markdown', required: false }
           - { label: 'Tags', name: 'tags', widget: 'list', required: false }
-
-
 
     - name: 'bible study'
       label: 'Bible Study'
