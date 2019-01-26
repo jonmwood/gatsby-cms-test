@@ -1,6 +1,7 @@
 ---
 templateKey: sermon-series
 title: How God Sees Me
+subtitle: testing
 sermonSeries: How God Sees Me
 length: 6
 sections:
