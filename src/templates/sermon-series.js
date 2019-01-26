@@ -57,9 +57,7 @@ export const query = graphql`
             html
             frontmatter {
                 title
-                subtitle
                 sermonSeries
-                passage
                 date(formatString: "MMMM DD YYYY")
                 image {
                     childImageSharp {
