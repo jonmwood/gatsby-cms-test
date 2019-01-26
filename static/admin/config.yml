@@ -26,7 +26,6 @@ collections:
           - { label: 'Body', name: 'body', widget: 'markdown' }
           - { label: 'Tags', name: 'tags', widget: 'list' }
 
-
     - name: 'sermon series'
       label: 'Sermon Series'
       folder: 'src/pages/sermon-series'
@@ -64,22 +63,22 @@ collections:
                 name: 'sections',
                 widget: 'list',
                 allow_add: true,
-                fields: 
+                fields:
                     [
-                        - { 
-                            label: 'Section Title', 
-                            name: 'sectionTitle', 
-                            widget: 'string', 
-                            required: false, 
-                          },
-                        - { 
-                            label: 'Section #', 
-                            name: 'sectionNumber', 
-                            widget: 'number', 
-                            valueType: 'int', 
-                            min: 1, 
+                        {
+                            label: 'Section Title',
+                            name: 'sectionTitle',
+                            widget: 'string',
                             required: false,
-                          },
+                        },
+                        {
+                            label: 'Section #',
+                            name: 'sectionNumber',
+                            widget: 'number',
+                            valueType: 'int',
+                            min: 1,
+                            required: false,
+                        },
                     ],
             }
           - { label: 'Publish Date', name: 'date', widget: 'datetime' }
@@ -92,8 +91,6 @@ collections:
             }
           - { label: 'Body', name: 'body', widget: 'markdown', required: false }
           - { label: 'Tags', name: 'tags', widget: 'list', required: false }
-
-
 
     - name: 'sermon'
       label: 'Sermon'
