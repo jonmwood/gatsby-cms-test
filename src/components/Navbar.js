@@ -83,7 +83,7 @@ const Navbar = () => (
       </NavLogo>
       <NavMenu>
         <NavLinks>
-          <NavLink className="" to="/sermons">
+          <NavLink className="" to="/sermon-archive">
             Sermons
           </NavLink>
           <NavLink className="" to="/bible-studies">

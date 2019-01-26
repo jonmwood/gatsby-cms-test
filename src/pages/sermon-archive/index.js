@@ -2,7 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql, StaticQuery } from 'gatsby'
 import Layout from '../../utilities/Layout'
-import classes from './sermons.sass'
 import { FaHome, FaBeer } from 'react-icons/fa';
 import Subtitle from '../../components/Subtitle';
 import SermonCard from '../../components/SermonCard';
@@ -72,7 +71,7 @@ SermonsPage.propTypes = {
 }
 
 export const pageQuery = graphql`
-query SermonQuery {
+query SermonArchiveQuery {
                     allMarkdownRemark(
                         sort: {order: DESC, fields: [frontmatter___date] },
         filter: {frontmatter: {templateKey: {eq: "blog-post" } } }
