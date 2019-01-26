@@ -3,7 +3,6 @@ import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from "gatsby"
 import Navbar from '../components/Navbar'
 import Archive from '../components/Archive'
-import Img from 'gatsby-image'
 import styled, { createGlobalStyle } from 'styled-components'
 import { media } from './MediaQueries'
 
