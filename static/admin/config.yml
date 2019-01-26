@@ -65,10 +65,8 @@ collections:
                 widget: 'list',
                 allow_add: true,
                 fields: 
-                    [
-                        - { label: 'Section Title', name: 'sectionTitle', widget: 'string', required: false },
-                        - { label: 'Section #', name: 'sectionNumber', widget: 'number', valueType: 'int', min: 1, required: false},
-                    ],
+                    - { label: 'Section Title', name: 'sectionTitle', widget: 'string', required: false },
+                    - { label: 'Section #', name: 'sectionNumber', widget: 'number', valueType: 'int', min: 1, required: false},
             }
           - { label: 'Publish Date', name: 'date', widget: 'datetime' }
           - { label: Image, name: image, widget: image, required: false }
