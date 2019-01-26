@@ -48,7 +48,7 @@ collections:
           - {
                 label: 'Sermon Series',
                 name: 'sermonSeries',
-                widget: 'text',
+                widget: 'string',
                 required: true,
             }
           - {

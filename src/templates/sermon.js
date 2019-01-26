@@ -31,7 +31,7 @@ export default class Sermon extends Component {
                     <h1>{markdownRemark.frontmatter.title}</h1>
                     <StyledDate>{markdownRemark.frontmatter.date}</StyledDate>
                     <StyledHTML content={markdownRemark.html} />
-                    <PreviewCompatibleImage imageInfo={markdownRemark.frontmatter} imageStyle={bibleStudyImageStyle} />
+                    <PreviewCompatibleImage imageInfo={markdownRemark.frontmatter} imageStyle={sermonImageStyle} />
 
 
                 </TemplateWrapper>
