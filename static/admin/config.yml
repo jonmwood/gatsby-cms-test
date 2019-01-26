@@ -26,7 +26,7 @@ collections:
           - { label: 'Body', name: 'body', widget: 'markdown' }
           - { label: 'Tags', name: 'tags', widget: 'list' }
 
-- name: 'sermon'
+    - name: 'sermon'
       label: 'Sermon'
       folder: 'src/pages/sermons'
       create: true
