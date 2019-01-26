@@ -67,7 +67,7 @@ collections:
                 fields: 
                     [
                         - { label: 'Section Title', name: 'sectionTitle', widget: 'string', required: false },
-                        - { label: 'Section #', name: 'sectionNumber', widget: 'number', valueType: 'int', min: 1, required: false}
+                        - { label: 'Section #', name: 'sectionNumber', widget: 'number', valueType: 'int', min: 1, required: false},
                     ],
             }
           - { label: 'Publish Date', name: 'date', widget: 'datetime' }
