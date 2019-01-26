@@ -1,6 +1,6 @@
 ---
 templateKey: sermon
-title: Fully Forgiven
+title: Fully Forgiven (Jazz Choi)
 sermonSeries: How God Sees Me
 passage: Hebrews 10
 date: 2019-01-26T08:52:58.630Z
