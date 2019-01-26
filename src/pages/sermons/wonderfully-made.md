@@ -1,6 +1,6 @@
 ---
 templateKey: sermon
-title: Wonderfully Made
+title: Wonderfully Made (Patrick Cho)
 sermonSeries: How God Sees Me
 passage: Psalm 139
 date: 2019-01-26T08:45:43.494Z
