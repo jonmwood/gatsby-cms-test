@@ -7,14 +7,8 @@ import styled from 'styled-components'
 import { StyledHTML } from '../components/Content';
 
 
-// Static Query
-// used anywhere, doesn't accept variables/parameters, can't use context
 
-
-// Page Query
-// Must be used on pages
-
-const bibleStudyImageStyle = {
+const sermonImageStyle = {
     'borderRadius': '5px',
     'width': '20vw',
     'height': '20vw',
@@ -28,7 +22,7 @@ const StyledDate = styled.p`
 `
 
 
-export default class BibleStudy extends Component {
+export default class Sermon extends Component {
     render() {
         const { markdownRemark } = this.props.data
         return (
@@ -48,7 +42,7 @@ export default class BibleStudy extends Component {
 
 
 export const query = graphql`
-    query SingleBibleStudyQuery($slug: String!) {
+    query SingleSermonQuery($slug: String!) {
         markdownRemark(fields: {
             slug: {
                 eq: $slug

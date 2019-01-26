@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 import logo from '../../static/img/rand-logo.png'
 import styled from 'styled-components'
 import { FaSearch } from 'react-icons/fa';
-import media from './MediaQueries'
+import { media } from '../utilities'
 
 const StyledNavbar = styled.nav`
   box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.05);

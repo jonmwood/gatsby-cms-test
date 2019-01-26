@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import TemplateWrapper from '../components/Layout'
+import TemplateWrapper from '../utilities/Layout'
 import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'

@@ -1,9 +1,9 @@
 import React from 'react'
-import TemplateWrapper from '../../components/Layout';
+import TemplateWrapper from '../../utilities/Layout';
 import { Link, StaticQuery, graphql } from 'gatsby'
 import styled, { css } from 'styled-components';
 import PreviewCompatibleImage from '../../components/PreviewCompatibleImage'
-import media from '../../components/MediaQueries'
+import { media } from '../../utilities'
 
 
 

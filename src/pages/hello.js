@@ -1,5 +1,5 @@
 import React from 'react'
-import TemplateWrapper from '../components/Layout';
+import TemplateWrapper from '../utilities/Layout';
 
 const HelloPage = () => {
     return (

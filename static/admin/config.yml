@@ -26,6 +26,59 @@ collections:
           - { label: 'Body', name: 'body', widget: 'markdown' }
           - { label: 'Tags', name: 'tags', widget: 'list' }
 
+- name: 'sermon'
+      label: 'Sermon'
+      folder: 'src/pages/sermons'
+      create: true
+      slug: '{{slug}}'
+      fields:
+          - {
+                label: 'Template Key',
+                name: 'templateKey',
+                widget: 'hidden',
+                default: 'sermon',
+            }
+          - { label: 'Title', name: 'title', widget: 'string', required: true }
+          - {
+                label: 'Subtitle',
+                name: 'subtitle',
+                widget: 'text',
+                required: false,
+            }
+        - {
+            label: 'Sermon Series',
+            name: 'sermonSeries',
+            widget: 'text',
+            required: true,
+        }
+        - {
+                label: 'Passage',
+                name: 'passage',
+                widget: 'text',
+                required: true,
+            }
+
+        - {
+            label: 'Section #',
+            name: 'section',
+            widget: 'number',
+            valueType: 'int',
+            min: 1,
+            required: false,
+        }
+          - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+          - { label: Image, name: image, widget: image, required: false }
+          - {
+                label: 'File Uploads',
+                name: 'files',
+                widget: 'file',
+                required: false,
+            }
+          - { label: 'Body', name: 'body', widget: 'markdown', required: false }
+          - { label: 'Tags', name: 'tags', widget: 'list', required: false }
+
+
+
     - name: 'bible study'
       label: 'Bible Study'
       folder: 'src/pages/bible-studies'

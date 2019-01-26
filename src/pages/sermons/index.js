@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql, StaticQuery } from 'gatsby'
-import Layout from '../../components/Layout'
+import Layout from '../../utilities/Layout'
 import classes from './sermons.sass'
 import { FaHome, FaBeer } from 'react-icons/fa';
 import Subtitle from '../../components/Subtitle';
