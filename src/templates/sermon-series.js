@@ -45,11 +45,18 @@ export default class Sermon extends Component {
 
 export const query = graphql`
     query SermonSeriesQuery($slug: String!) {
-        markdownRemark(fields: {
-            slug: {
-                eq: $slug
+        markdownRemark(
+            fields: {
+                slug: {
+                    eq: $slug
+                }
             }
-        }) {
+            frontmatter: {
+                templateKey: {
+                    eq: "sermon-series"
+                }
+            }
+        ) {
             fields {
                 slug
             }
@@ -57,7 +64,13 @@ export const query = graphql`
             html
             frontmatter {
                 title
+                seriesSubtitle 
+                seriesLength
                 sermonSeries
+                seriesSections {
+                    sectionTitle
+                    sectionNumber
+                }
                 date(formatString: "MMMM DD YYYY")
                 image {
                     childImageSharp {
