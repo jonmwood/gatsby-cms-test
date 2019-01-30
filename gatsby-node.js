@@ -43,6 +43,7 @@ exports.createPages = ({ actions, graphql }) => {
         context: {
           id,
           slug: edge.node.fields.slug,
+          sermonSeries: edge.node.frontmatter.sermonSeries,
         },
       })
     })

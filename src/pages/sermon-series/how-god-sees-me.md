@@ -5,7 +5,7 @@ seriesSubtitle: testing
 sermonSeries: How God Sees Me
 seriesLength: 6
 seriesSections:
-    - sectionTitle: First Section
-      sectionNumber: 1
+    - sectionTitle:
+      sectionNumber:
 date: 2019-01-26T12:05:29.969Z
 ---

@@ -40,7 +40,7 @@ collections:
             }
           - { label: 'Title', name: 'title', widget: 'string', required: true }
           - {
-                label: 'seriesSubtitle',
+                label: 'Series Subtitle',
                 name: 'seriesSubtitle',
                 widget: 'string',
                 required: false,
@@ -106,8 +106,8 @@ collections:
             }
           - { label: 'Title', name: 'title', widget: 'string', required: true }
           - {
-                label: 'Subtitle',
-                name: 'subtitle',
+                label: 'Sermon Subtitle',
+                name: 'sermon_Subtitle',
                 widget: 'string',
                 required: false,
             }
@@ -126,7 +126,7 @@ collections:
 
           - {
                 label: 'Section #',
-                name: 'section',
+                name: 'sectionNumber',
                 widget: 'number',
                 valueType: 'int',
                 min: 1,

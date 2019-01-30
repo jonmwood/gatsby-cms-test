@@ -75,7 +75,7 @@ export const pageQuery = graphql`
 query SermonQuery {
                     allMarkdownRemark(
                         sort: {order: DESC, fields: [frontmatter___date] },
-        filter: {frontmatter: {templateKey: {eq: "blog-post" } } }
+        filter: {frontmatter: {templateKey: {eq: "sermon" } } }
     ) {
                     edges {
                 node {
