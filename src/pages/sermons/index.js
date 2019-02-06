@@ -5,7 +5,7 @@ import Layout from '../../utilities/Layout'
 import classes from './sermons.sass'
 import { FaHome, FaBeer } from 'react-icons/fa';
 import Subtitle from '../../components/Subtitle';
-import SermonCard from '../../components/SermonCard';
+import SermonSeriesCard from '../../components/SermonSeriesCard';
 import styled from 'styled-components'
 import TabsController from '../../components/Tabs'
 

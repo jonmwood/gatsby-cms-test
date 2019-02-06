@@ -130,6 +130,7 @@ export default class Sermon extends Component {
                 <TemplateWrapper>
                     <SeriesContent>
                         <h1>{SermonSeriesData.frontmatter.title}</h1>
+                        <h3>{SermonSeriesData.frontmatter.seriesSubtitle}</h3>
                         <p>{SermonSeriesData.frontmatter.seriesLength} Weeks</p>
                         <StyledHTML content={SermonSeriesData.frontmatter.html} />
                         <PreviewCompatibleImage imageInfo={SermonSeriesData.frontmatter} imageStyle={sermonSeriesImageStyle} />

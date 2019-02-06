@@ -52,6 +52,27 @@ collections:
                 required: false,
             }
           - {
+                label: 'Category',
+                name: 'category',
+                widget: 'select',
+                options:
+                    [
+                        'OT-Pentateuch',
+                        'OT-History',
+                        'OT-Pre-Exilic',
+                        'OT-Exilic',
+                        'OT-Wisdom',
+                        'NT-Gospels',
+                        'NT-Pauline-Epistles',
+                        'NT-General-Epistles',
+                        'NT-Apocalypse',
+                        'Topical',
+                        'Appendices',
+                        'Misc',
+                    ],
+                required: true,
+            }
+          - {
                 label: '# of weeks',
                 name: 'seriesLength',
                 widget: 'number',

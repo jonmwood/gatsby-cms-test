@@ -3,6 +3,7 @@ templateKey: sermon-series
 title: How God Sees Me
 seriesSubtitle: testing
 sermonSeries: How God Sees Me
+category: Topical
 seriesLength: 6
 seriesSections:
     - sectionTitle:
