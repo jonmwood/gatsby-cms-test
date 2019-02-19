@@ -8,42 +8,6 @@ import { media } from '../utilities/MediaQueries'
 import { FaLessThanEqual } from 'react-icons/fa';
 
 
-// const SERMON_QUERY = graphql`
-//     query SpecificSermon {
-//         allMarkdownRemark(
-//             limit: 1000, 
-//             filter: {
-//                 frontmatter: {
-//                     templateKey: {eq: "sermon"}
-//                 }
-//             }
-//             sort: {
-//             order: ASC,
-//             fields: [frontmatter___date]
-//         }) {
-//             edges {
-//                 node {
-//                     fields {
-//                         slug
-//                     }
-//                     frontmatter {
-//                         title
-//                         sermonSeries
-//                         passage
-//                         date
-//                         image {
-//                             childImageSharp {
-//                                 fluid(maxWidth: 1000) {
-//                                     ...GatsbyImageSharpFluid
-//                                 }
-//                             }
-//                         }
-//                     }
-//                 }
-//             }
-//         }
-//     }
-// `
 const SeriesContent = styled.div`
 `
 

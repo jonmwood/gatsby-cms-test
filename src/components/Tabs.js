@@ -23,6 +23,22 @@ const Category = styled.div`
 
 `
 
+// Will need to review github issue to use this Higher Order Component Example in order to be able to have multiple queries in the same file
+
+const withData = (WrappedComponent) = (
+    (props) =>
+        <StaticQuery query={SERMON_ARCHIVE} render={(data) =>
+            <WrappedComponent {...props} data={data} />
+        } />
+)
+
+export const MyFirstQuery = withData(({ data, ...props }) => (
+    <div>hello world</div>
+));
+
+export const MySecondQuery = withData(({ data, ...props }) => (
+    <div>hello world</div>
+));
 
 
 
@@ -260,6 +276,7 @@ export default class TabsController extends React.Component {
                 <StyledTabPanel>
                     <Category>
                         <SermonsContainer>
+                            <MyFirstQuery />
                             <StaticQuery
                                 query={SERMON_ARCHIVE}
                                 render={({ allMarkdownRemark }) => (

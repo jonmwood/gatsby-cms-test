@@ -60,6 +60,8 @@ const ContentContainer = styled.div`
     `}
 `
 
+
+// refactored this component to take in props from the SermonSeries to render this card correctly
 const SermonSeriesCard = (props) => {
 
     return (

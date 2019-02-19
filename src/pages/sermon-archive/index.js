@@ -35,6 +35,9 @@ export default class SermonsPage extends React.Component {
                 <ListWrapper>
                     <section className="section">
                         <h1 className="">Sermon Archive</h1>
+
+
+                        {/* Simplified this page since TabsController holds most of the data, refactored and put query in that component */}
                         <TabsController></TabsController>
                     </section>
                 </ListWrapper>
